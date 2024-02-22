@@ -1,0 +1,128 @@
+:root {
+    /* CSS змінні для сольорів */
+    --purple: #a7a8e4;
+    --darkyellow: #d2b901;
+    --darkblue: rgb(29, 58, 69);
+    --lightblue: rgb(127, 197, 224);
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* var(імя змінної) спосіб застосування змінної */
+    background-color: var(--darkblue);
+    color: var(--darkyellow);
+    /* встановлюе міжрядковий інтервал */
+    line-height: 24px;
+
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-weight: 100;
+    color: var(--purple);
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    /* color: var(--darkyellow); */
+    color: inherit;
+    /*контроюе регістр літер  */
+    text-transform: uppercase;
+    /* контролюе наявність лініі у текста */
+    text-decoration: none;
+    /* text-decoration: line-through; */
+    /* динаміка переходу з одного стану в інший */
+    /* transition: color 1s cubic-bezier(0.25, 0.1, 0.78, -0.29); */
+    transition: color 1s ease;
+}
+
+/* :hover це особливий стан елементу при наведені на нього вказівника мишки */
+a:hover {
+    color: var(--purple);
+}
+
+li {
+    color: var(--lightblue);
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+}
+
+.persons {
+    display: flex;
+    /* flex-direction: row; */
+    /*активно зо замовченям*/
+    justify-content: center;
+    /*flex-wrap: wrap; */
+    column-gap: 60px;
+    row-gap: 60px;
+    /* flex-direction:row-reverse; */
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+
+
+}
+
+.persons article {
+    width: 340px;
+    border: 2px solid var(--darkyellow);
+    padding: 24px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.persons article h3 {
+    margin-top: 0;
+
+}
+
+.persons article img {
+    border-radius: 50%;
+    border: 10px dotted var(--purple);
+}
+
+.persons article p {
+    text-align: justify;
+}
+
+.test {
+    /* margin-left: 50px; */
+}
+footer{
+    border-top: 2px solid var(--purple);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+
+}
